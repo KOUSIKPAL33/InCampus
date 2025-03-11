@@ -6,7 +6,7 @@ const connecttomongo = require("./db");
 connecttomongo();
 
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173"); 
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173", "https://in-campus-frontend.vercel.app");
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
 
@@ -24,7 +24,7 @@ app.use(express.json());
 app.use('/api/', require("./routes/CreateUser"));
 app.use('/api/', require("./routes/ShopsData"));
 app.use('/api/cart', require("./routes/cartRouter"));
-app.use('/api/address',require("./routes/addressRoter"));
+app.use('/api/address', require("./routes/addressRoter"));
 //app.use('/api/', require("./routes/userRouter"));
 
 

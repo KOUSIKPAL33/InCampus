@@ -1,2 +1,2 @@
-const baseurl = "http://localhost:5000/api";
+const baseurl = "https://in-campus-backend.vercel.app/api";
 export default baseurl;
